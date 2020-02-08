@@ -1,11 +1,11 @@
-window.addEventListener('load', (event) => {
+/*window.addEventListener('load', (event) => {
     chrome.tabs.executeScript(null, {
       file: 'selection.js',  }, () => {
-        connect()   });
-    });
+        connect()});
+});
 
 
-  function connect() {
+function connect() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const port = chrome.tabs.connect(tabs[0].id);
       port.postMessage({ function: 'html' });
@@ -15,11 +15,10 @@ window.addEventListener('load', (event) => {
         description = response.description;
       });
     });
-  }
+}
   
 const id = document.getElementById('paste')
-console.log(id)
- id.addEventListener('click', (event) => pasteHighlight())
+pasteHighlight();
 function pasteHighlight() {
     chrome.tabs.query({active:true, windowId: chrome.windows.WINDOW_ID_CURRENT},
         tab => {
@@ -28,4 +27,4 @@ function pasteHighlight() {
                 text.innerHTML = response.data;
             });
         });
-}
+}*/

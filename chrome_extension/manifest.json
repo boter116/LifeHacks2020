@@ -1,5 +1,5 @@
 {
-    "name": "LifeHacks2020",
+    "name": "Intentions",
     "version": "1.0",
     "description": "STREAM YUMMY",
     "manifest_version": 2,
@@ -8,13 +8,11 @@
     },
     "permissions": [
         "tabs",
+        "contextMenus",
         "<all_urls>"
       ],
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "js": ["selection.js"],
-        "run_at": "document_start",
-        "all_frames": true
-    }],
+    "background": {
+        "scripts": ["selection.js"]
+    },
     "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
   }
