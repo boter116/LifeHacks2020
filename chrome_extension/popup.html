@@ -6,16 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LifeHacks2020</title>
     <style>
-        .test {
-            width:200px;
-            height: 200px;
-            background-color: red;
+        .button{
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            display: block;
+        }
+        .center-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container{
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            /*background-color: aqua;*/
+        }
+        textarea{
+            height: 150px;
+        }
+        #title{
+            margin-top: 0px;
         }
     </style>
-</head>
+</head> 
 <body>
-    <div class = "test">
-        <h1>Fuck</h1>
+    <div class = "flex-container">
+        <h1 id = "title">Intentions</h1>
+        <div class = "center-button button box">
+            <button>Scan Page</button>
+        </div>
+        <div id = "paste" class = "box">
+            <h1>Dates</h1>
+            <form>
+                <textarea><!--DATES GO HERE--></textarea>
+            </form>
+        </div>
     </div>
 </body>
 </html>
