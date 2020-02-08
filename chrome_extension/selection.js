@@ -1,18 +1,17 @@
-function saveEvent() {
+function saveEvent(event) {
     // api call 
+    console.log(event)
+    alert(event.selectionText)
 }
 
-
-chrome.extension.onMessage.addListener((request, sender, sendResponse) =>{
-    if (request.method == "getSelection") {
-    if (window.getSelection().toString() == "boolean")
-    {
-    chrome.contextMenus.create({
-        title: "Save: %s",
-        contexts: ["selection"],
-        onclick: saveEvent
-    });
-    } }
-    else
-        sendResponse({});
+chrome.contextMenus.create({
+    title: "Save: %s",
+    contexts: ["selection"],
+    onclick: (event) => saveEvent(event)
 });
+// chrome.extension.onMessage.addListener((request, sender, sendResponse) =>{
+//     if (request.method == "getSelection") {
+  
+//     else
+//         sendResponse({});
+// });
