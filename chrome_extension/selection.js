@@ -4,8 +4,9 @@ const monthReg = [new RegExp('(((j|J)an)(uary)?)'),new RegExp('(((f|F)eb)(ruary)
     new RegExp('(((n|N)ov)(ember)?)'), new RegExp('((((d|D)ec)(ember)?)')]; // regex for different ways of writing month
 
 
-const month= ["january","february","march","april","may","june","july",
+const months= ["january","february","march","april","may","june","july",
     "august","september","october","november","december"];
+const durations = ["week", "month", "day", "weeks","months", "days", "year", "years"]
 
 function saveEvent(event) {
     if(filterDate(event.selectionText)) {
@@ -14,16 +15,20 @@ function saveEvent(event) {
 }
 
 
-
 // true if date is format "Month xx" or "month" or "mon" or "mon xx"
 function filterDate(text) {
     text = convertDate(text);
     console.log(text);
     if( ((new Date(event.selectionText) !== "Invalid Date") && !isNaN(new Date(event.selectionText)) 
-        || month.includes(event.selectionText)))
+        || months.some(month => event.selectionText.toLowerCase().includes(month))))
     {
         return true;
-    } else {
+    } 
+    else if (durations.some((duration) => event.selectionText.toLowerCase().includes(duration) === true )) 
+    {
+        return true;
+    }
+    else {
         alert("Not a saveable date!")
         return false;
     }
