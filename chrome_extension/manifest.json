@@ -1,7 +1,7 @@
 {
-    "name": "Getting Started Example",
+    "name": "LifeHacks2020",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "STREAM YUMMY",
     "manifest_version": 2,
     "permissions": ["activeTab"],
     "background": {
