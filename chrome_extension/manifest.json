@@ -3,11 +3,15 @@
     "version": "1.0",
     "description": "STREAM YUMMY",
     "manifest_version": 2,
-    "permissions": ["activeTab"],
-    "background": {
-        "scripts": ["background.js"]
-    },
+    "permissions": ["tabs","<all_urls>"],
     "browser_action": {
         "default_popup": "popup.html"
-    }
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["selection.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    }],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
   }

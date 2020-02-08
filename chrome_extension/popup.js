@@ -1,3 +1,8 @@
+const id = document.getElementById('paste')
+console.log(id)
+ id.addEventListener('onclick', (event) => {
+     pasteHighlight();
+ })
 function pasteHighlight() {
     chrome.tabs.query({active:true, windowId: chrome.windows.WINDOW_ID_CURRENT},
         tab => {
@@ -7,3 +12,4 @@ function pasteHighlight() {
             });
         });
 }
+
