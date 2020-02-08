@@ -11,10 +11,13 @@ const durations = ["week", "month", "day", "weeks","months", "days", "year", "ye
 async function saveEvent(event) {
     if(filterDate(event.selectionText)) {
         try{
-            await fetch('http://localhost:5000/')
+            let data = {
+                word: event.selectionText
+            }
+            await fetch('http://localhost:5000/', {method: 'post', body: JSON.stringify(data)})
             alert('success')
         } catch(e) {
-            alert('err')
+            alert(e)
         }
 }}
 

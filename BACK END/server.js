@@ -16,6 +16,7 @@ app.post('/', (req,res) => {
         // Authorize a client with credentials, then call the Google Calendar API.
         authorize(JSON.parse(content), quickAdd, word);
       });
+      res.sendStatus(200)
 })
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
