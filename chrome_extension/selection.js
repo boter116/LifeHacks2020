@@ -21,7 +21,6 @@ async function saveEvent(event) {
         }
 }}
 
-
 // true if date is format "Month xx" or "month" or "mon" or "mon xx"
 function filterDate(text) {
     text = convertDate(text);
