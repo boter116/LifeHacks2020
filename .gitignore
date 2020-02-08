@@ -7,4 +7,5 @@ node_modules
 # temporary files
 *.tmp
 *~
-# will be updated as files are created
+# google OAuth file
+token.json
