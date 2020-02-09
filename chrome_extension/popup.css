@@ -1,0 +1,56 @@
+        body{
+            font-family: 'Open-Sans', sans-serif;
+        }
+        button{
+            /*padding: 16px 32px;*/
+            background-color: #24CD8F;
+            transition: background-color .3s ease;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            outline-style: none;
+            padding: 16px 32px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+            display: block;
+        }
+        button:hover{
+            background-color: #20B27A;
+        }
+        button:active{
+            background-color: #167F55;
+        }
+        .center-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container{
+            height: 400px;
+            width: 225px;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            padding: 16;
+            /*background-color: aqua;*/
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Roboto', sans-serif;
+            color:#1B3146;  
+        }
+        textarea{
+            height: 150px;
+            width: 100%;
+        }
+        #title{
+            margin-top: 0px;
+            margin-bottom:0px;
+        }
+        #subtitle{
+            margin-top: 0px;
+        }
+        #subtitle2{
+            margin-bottom: 0px;
+        }
