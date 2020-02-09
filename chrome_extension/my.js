@@ -1,4 +1,6 @@
+
 document.getElementById('receivedDate').addEventListener("click", submit);
+let array1 = ["March 1", "March 2", "Feb 3"];
 for( var i=0; i < array1.length; i++ ) {
     addElement( array1[i] );
 }
