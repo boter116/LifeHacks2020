@@ -1,10 +1,12 @@
+
+document.getElementById('receivedDate').addEventListener("click", submit);
+let array1 = ["March 1", "March 2", "Feb 3"];
 var array1 = [
     "Mar 15",
     "June 7",
     "april 3",
     "sept 1"
 ];
-document.getElementById('receivedDate').addEventListener("click", submit);
 for( var i=0; i < array1.length; i++ ) {
     addElement( array1[i] );
 }

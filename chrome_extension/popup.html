@@ -5,50 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LifeHacks2020</title>
-
-    <style>
-        .button{
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            font-size: 16px;
-            display: block;
-        }
-        .center-button{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .flex-container{
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-content: flex-start;
-            /*background-color: aqua;*/
-        }
-        textarea{
-            height: 150px;
-        }
-        #title{
-            margin-top: 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="popup.css">
 </head> 
 <body>
     <div class = "flex-container">
         <h1 id = "title">Intentions</h1>
-        <h6>Feat. Quavo</h6>
+        <h6 id = "subtitle">Feat. Quavo</h6>
 
         <div class = "center-button button box">
-            <button>Scan Page</button>
+            <button>SCAN PAGE</button>
         </div>
         <div id = "paste" class = "box">
             <h1>Dates</h1>
-            <form>
-                <textarea><!--DATES GO HERE--></textarea>
-            </form>
+            <div id = "div1">
+                <div id = "receivedDate">
+                    
+                </div>
+
+            </div>
+            <div>
+                <form id="myForm">
+                    <p id = "subtitle2">Selected Date:</p> <br>
+                    <div><input disabled id="uniquetextfield" type="text" name="username"></div><br>
+                    <button id="submitDate">ADD TO CALENDAR</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="popup.js"></script>
+    <script src="my.js"></script>
 </body>
-</html>
