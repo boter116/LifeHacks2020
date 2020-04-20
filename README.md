@@ -1,4 +1,4 @@
-# welcome to our git repository!
+# welcome to Intentions!
 This is a chrome extension that [APPLICATION ID]
 <!--
     MADEBY:
